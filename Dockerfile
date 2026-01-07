@@ -85,7 +85,7 @@ COPY --from=builder /usr/src/microsoft-rewards-script/node_modules ./node_module
 COPY --chmod=755 src/run_daily.sh ./src/run_daily.sh
 COPY --chmod=644 src/crontab.template /etc/cron.d/microsoft-rewards-cron.template
 COPY --chmod=755 entrypoint.sh /usr/local/bin/entrypoint.sh
-COPY src/accounts.json ./src/accounts.json
+
 
 # Create log directory
 RUN mkdir -p /var/log
